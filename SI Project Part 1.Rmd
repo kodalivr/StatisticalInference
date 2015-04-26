@@ -3,6 +3,7 @@ title: "Statistical Inference Project Part 1"
 author: "Venkat Kodali"
 output:
   pdf_document: default
+  
 ---
 
 ## Overview
@@ -16,8 +17,8 @@ set.seed(3)
 lambda <- 0.2
 num_simulate <- 1000
 sample_size <- 40
-sim <- matrix(rexp(num_simulate*sample_size, rate=lambda), num_simulate, sample_size)
-row_means <- rowMeans(sim)
+simulate <- matrix(rexp(num_simulate*sample_size, rate=lambda), num_simulate, sample_size)
+row_means <- rowMeans(simulate)
 ```
 
 The distribution of sample means is as follows.
