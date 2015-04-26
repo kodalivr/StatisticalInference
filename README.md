@@ -1,1 +1,1 @@
-# StatisticalInference
+# Statistical Inference Repository
