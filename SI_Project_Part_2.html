@@ -102,14 +102,17 @@ summary(fit)</code></pre>
 ## Residual standard error: 4.236 on 57 degrees of freedom
 ## Multiple R-squared:  0.7038, Adjusted R-squared:  0.6934 
 ## F-statistic: 67.72 on 2 and 57 DF,  p-value: 8.716e-16</code></pre>
-<p>The model explains 70% of the variance in the data. The intercept is r fit<span class="math">\(coefficients[[1]], meaning that with no supplement of Vitamin C, the average tooth length is r fit\)</span>coefficients[[1]] units. The coefficient of dose is r fit<span class="math">\(coefficients[[2]]. It can be interpreted as increasing the delievered dose 1 mg, all else equal (i.e. no change in the supplement type), would increase the tooth length r fit\)</span>coefficients[[2]] units. The last coefficient is for the supplement type. Since the supplement type is a categorical variable, dummy variables are used. The computed coefficient is for suppVC and the value is r fit<span class="math">\(coefficients[[3]] meaning that delivering a given dose as ascorbic acid, without changing the dose, would result in r abs(fit\)</span>coefficients[[3]]) units of decrease in the tooth length. Since there are only two categories, we can also conclude that on average, delivering the dosage as orange juice would increase the tooth length by r abs(fit$coefficients[[3]]) units.</p>
+<p>The model explains 70% of the variance in the data. The intercept is r fit<span class="math">\(coefficients[[1]], meaning that with no supplement of Vitamin C, the average tooth length is r fit\)</span>coefficients[[1]] units. The coefficient of dose is r fit<span class="math">\(coefficients[[2]]. It can be interpreted as increasing the delievered dose 1 mg, all else equal (i.e. no change in the supplement type), would increase the tooth length r fit\)</span>coefficients[[2]] units. The last coefficient is for the supplement type.</p>
+<p>Since the supplement type is a categorical variable, dummy variables are used. The computed coefficient is for suppVC and the value is r fit<span class="math">\(coefficients[[3]] meaning that delivering a given dose as ascorbic acid, without changing the dose, would result in r abs(fit\)</span>coefficients[[3]]) units of decrease in the tooth length.</p>
+<p>Since there are only two categories, we can also conclude that on average, delivering the dosage as orange juice would increase the tooth length by r abs(fit$coefficients[[3]]) units.</p>
 <p>95% confidence intervals for two variables and the intercept are as follows.</p>
 <pre class="r"><code>confint(fit)</code></pre>
 <pre><code>##                 2.5 %    97.5 %
 ## (Intercept)  6.704608 11.840392
 ## dose         8.007741 11.519402
 ## suppVC      -5.889905 -1.510095</code></pre>
-<p>The confidence intervals mean that if we collect a different set of data and estimate parameters of the linear model many times, 95% of the time, the coefficient estimations will be in these ranges. For each coefficient (i.e. intercept, dose and suppVC), the null hypothesis is that the coefficients are zero, meaning that no tooth length variation is explained by that variable. All p-values are less than 0.05, rejecting the null hypothesis and suggesting that each variable explains a significant portion of variability in tooth length, assuming the significance level is 5%.</p>
+<p>The confidence intervals mean that if we collect a different set of data and estimate parameters of the linear model many times, 95% of the time, the coefficient estimations will be in these ranges. For each coefficient (i.e. intercept, dose and suppVC), the null hypothesis is that the coefficients are zero, meaning that no tooth length variation is explained by that variable.</p>
+<p>All p-values are less than 0.05, rejecting the null hypothesis and suggesting that each variable explains a significant portion of variability in tooth length, assuming the significance level is 5%.</p>
 </div>
 
 

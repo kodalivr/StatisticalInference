@@ -1,7 +1,7 @@
 ---
 title: "Statistical Inference Project Part 2"
 author: "Venkat Kodali"
-output: pdf_document
+output: html_document
 ---
 
 ## Overview

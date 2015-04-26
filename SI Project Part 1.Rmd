@@ -2,8 +2,8 @@
 title: "Statistical Inference Project Part 1"
 author: "Venkat Kodali"
 output:
+  html_document: default
   pdf_document: default
-  
 ---
 
 ## Overview
@@ -23,7 +23,7 @@ row_means <- rowMeans(simulate)
 
 The distribution of sample means is as follows.
 
-```{r, echo=TRUE}
+```{r, echo=FALSE}
 # plot the histogram of averages
 hist(row_means, breaks=50, prob=TRUE,
      main="Distribution of averages of samples,
@@ -45,13 +45,13 @@ The distribution of sample means is centered at r mean(row_means) and the theore
 
 Due to the central limit theorem, the averages of samples follow normal distribution. The figure above also shows the density computed using the histogram and the normal density plotted with theoretical mean and variance values. Also, the q-q plot below suggests the normality.
 
-```{r, echo=TRUE}
+```{r, echo=FALSE}
 qqnorm(row_means); qqline(row_means)
 ```
 
 Evaluate the coverage of the confidence interval for $1/\lambda = \bar{X} \pm 1.96 \frac{S}{\sqrt{n}}$
 
-```{r, echo=TRUE}
+```{r, echo=FALSE}
 lambda_vals <- seq(4, 6, by=0.01)
 coverage <- sapply(lambda_vals, function(lamb) {
     mu_hats <- rowMeans(matrix(rexp(sample_size*num_simulate, rate=0.2),
